@@ -11,10 +11,6 @@ document.addEventListener('DOMContentLoaded', () => {
     fetchData()
     cargarCarritoDeLocalStorage()
     pintarCarrito()
-    // if (localStorage.getItem('carrito')) {
-    //     carrito = JSON.parse(localStorage.getItem('carrito'))
-    //     pintarCarrito()
-    // }
 })
 cards.addEventListener('click', e => {
     addCarrito(e)
