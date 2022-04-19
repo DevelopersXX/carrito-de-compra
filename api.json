@@ -3,18 +3,18 @@
         "id": 1,
         "nombre": "Maceta cuadrada",
         "precio": 500,
-        "imagen":"/imagenes/cuadrado.jpg"
+        "imagen":"cuadrado.jpg"
     },
     {
         "id": 2,
         "nombre": "Maceta Hexagonal",
         "precio": 600,
-        "imagen":"/imagenes/hexagonal.jpg"
+        "imagen":"hexagonal.jpg"
     },
     {
         "id": 3,
         "nombre": "Maceta Triangular",
         "precio": 500,
-        "imagen":"/imagenes/triangular.jpg"
+        "imagen":"triangular.jpg"
     }
 ]
