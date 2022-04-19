@@ -9,10 +9,12 @@ let carrito = {}
 
 document.addEventListener('DOMContentLoaded', () => {
     fetchData()
-    if (localStorage.getItem('carrito')) {
-        carrito = JSON.parse(localStorage.getItem('carrito'))
-        pintarCarrito()
-    }
+    cargarCarritoDeLocalStorage()
+    pintarCarrito()
+    // if (localStorage.getItem('carrito')) {
+    //     carrito = JSON.parse(localStorage.getItem('carrito'))
+    //     pintarCarrito()
+    // }
 })
 cards.addEventListener('click', e => {
     addCarrito(e)
@@ -88,7 +90,7 @@ const pintarCarrito = () => {
 
     pintarFooter()
 
-    localStorage.setItem('carrito', JSON.stringify(carrito))
+    guardarCarritoEnLocalStorage()
 }
 
 const pintarFooter = () => {
@@ -146,4 +148,16 @@ const btnAccion = e => {
     pintarCarrito()
    }
    e.stopPropagation()
+}
+
+// localStorage
+function guardarCarritoEnLocalStorage() {
+    localStorage.setItem('carrito', JSON.stringify(carrito));
+}
+
+function cargarCarritoDeLocalStorage() {
+    if (localStorage.getItem('carrito') !== null) {
+        // Carga la información
+        carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+    }
 }
